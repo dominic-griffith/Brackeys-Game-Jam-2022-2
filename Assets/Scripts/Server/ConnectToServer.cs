@@ -17,6 +17,6 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
-        SceneLoader.GetInstance().LoadSceneByName("Lobby");
+        SceneLoader.GetInstance().OfflineLoadSceneByName("Lobby");
     }
 }

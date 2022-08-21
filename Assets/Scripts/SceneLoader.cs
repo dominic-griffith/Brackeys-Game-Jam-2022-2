@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -24,20 +25,7 @@ public class SceneLoader : MonoBehaviour
         return Instance;
     }
 
-    public void LoadSceneByNumber(int scene)
-    {
-        SceneManager.LoadScene(scene);
-    }
 
-    public void LoadSceneByName(string scene)
-    {
-        SceneManager.LoadScene(scene);
-    }
-
-    public void ReloadScene()
-    {
-        SceneManager.LoadScene(GetCurrentScene());
-    }
 
     public int GetCurrentScene()
     {
@@ -51,5 +39,41 @@ public class SceneLoader : MonoBehaviour
 #else
         Application.Quit();
 #endif
+    }
+
+
+    //Offline Loading
+
+    public void OfflineLoadSceneByNumber(int scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
+
+    public void OfflineLoadSceneByName(string scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
+
+    public void OfflineReloadScene()
+    {
+        SceneManager.LoadScene(GetCurrentScene());
+    }
+
+
+    //Online Loading
+
+    public void OnlineLoadSceneByNumber(int scene)
+    {
+        PhotonNetwork.LoadLevel(scene);
+    }
+
+    public void OnlineLoadSceneByName(string scene)
+    {
+        PhotonNetwork.LoadLevel(scene);
+    }
+
+    public void OnlineReloadScene()
+    {
+        PhotonNetwork.LoadLevel(GetCurrentScene());
     }
 }
