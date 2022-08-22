@@ -1,22 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
     public float runSpeed = 40f;
+
+    private PhotonView view;
     private float horizontalMove = 0f;
     private bool jump = false;
 
+    private void Start()
+    {
+        view = GetComponent<PhotonView>();
+    }
+
     private void Update()
     {
-        GetInput();
+        if (view.IsMine)
+        {
+            GetInput();
+        }
+        
     }
 
     private void FixedUpdate()
     {
-        MoveCharacter();
+        if(view.IsMine)
+        {
+            MoveCharacter();
+        } 
     }
 
     private void GetInput()
