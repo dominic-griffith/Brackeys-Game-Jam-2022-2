@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Music
   layers:
   - Default
   - TransparentFX
@@ -40,4 +41,28 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 1530890065
+    locked: 0
+  - name: mountain-mountain-far
+    uniqueID: 343874035
+    locked: 0
+  - name: mountain-mountain
+    uniqueID: 2231455717
+    locked: 0
+  - name: mountain-trees
+    uniqueID: 2169154245
+    locked: 0
+  - name: mountain-foreground
+    uniqueID: 418647769
+    locked: 0
+  - name: fireflies
+    uniqueID: 3109729023
+    locked: 0
+  - name: ui
+    uniqueID: 2747952499
+    locked: 0
+  - name: terrain
+    uniqueID: 1311964649
     locked: 0
