@@ -223,7 +223,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 42263040}
-  parallaxEffect: 1
+  xParallaxEffect: 1
+  yParallaxEffect: 1
 --- !u!1 &42263040
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +302,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42263040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.009, y: 0.893, z: -10}
+  m_LocalPosition: {x: 0, y: 0.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -958,7 +959,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 42263040}
-  parallaxEffect: 0.7
+  xParallaxEffect: 0.8
+  yParallaxEffect: 0.95
 --- !u!1 &1105402446
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,7 +1349,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 42263040}
-  parallaxEffect: 0.5
+  xParallaxEffect: 0.7
+  yParallaxEffect: 0.9
 --- !u!1 &1235744574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1448,7 +1451,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 42263040}
-  parallaxEffect: 0.3
+  xParallaxEffect: 0.5
+  yParallaxEffect: 0.5
 --- !u!1001 &1580706177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3988,4 +3992,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 42263040}
-  parallaxEffect: 0
+  xParallaxEffect: 0.3
+  yParallaxEffect: 0.3

@@ -4,25 +4,32 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    private float length, startPosition;
+    private float xlen, xStartPos, yStartPos;
     public GameObject camera;
-    public float parallaxEffect;
+    public float xParallaxEffect, yParallaxEffect;
 
     void Start()
     {
-        startPosition = transform.position.x;
-        length = GetComponent<SpriteRenderer>().bounds.size.x;
+        xStartPos = transform.position.x;
+        xlen = GetComponent<SpriteRenderer>().bounds.size.x;
+        yStartPos = transform.position.y;
     }
 
     void FixedUpdate()
     {
-        float cameraTravel = (camera.transform.position.x * (1 - parallaxEffect)); 
-        float dist = (camera.transform.position.x * parallaxEffect);
-        transform.position = new Vector3(startPosition + dist, transform.position.y, transform.position.z);
-        if (cameraTravel > startPosition + length) {
-            startPosition += length;
-        } else if (cameraTravel < startPosition - length) {
-            startPosition -= length;
+        // x-axis
+        float xCameraTravel = (camera.transform.position.x * (1 - xParallaxEffect)); 
+        float xDist = (camera.transform.position.x * xParallaxEffect);
+        transform.position = new Vector3(xStartPos + xDist, transform.position.y, transform.position.z);
+        if (xCameraTravel > xStartPos + xlen) {
+            xStartPos += xlen;
+        } else if (xCameraTravel < xStartPos - xlen) {
+            xStartPos -= xlen;
         }
+
+        // y-axis
+        float yDelta = camera.transform.position.y - yStartPos;
+        float yDist = (yDelta * yParallaxEffect);
+        transform.position = new Vector3(transform.position.x, yStartPos + yDist, transform.position.z);
     }
 }
