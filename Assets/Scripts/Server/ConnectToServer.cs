@@ -10,6 +10,15 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     public TMP_InputField userName;
     public GameObject loading;
 
+    private void Start()
+    {
+        loading.SetActive(true);
+        Debug.Log("Connecting to server");
+        PhotonNetwork.GameVersion = "0.0.1";
+        PhotonNetwork.AutomaticallySyncScene = true;
+        PhotonNetwork.ConnectUsingSettings();
+    }
+
     public void OnClickConnect()
     {
         if(userName.text.Length >= 1)

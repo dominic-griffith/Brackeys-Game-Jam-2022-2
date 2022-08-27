@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: ce605429bdf03484197735f1bf40bfb2
-  - enabled: 1
+  - enabled: 0
     path: Assets/PanguStuff/Scenes/PlayTestScene.unity
     guid: cd9a4ad3d7240034586fc1bfd02456dd
   - enabled: 0
