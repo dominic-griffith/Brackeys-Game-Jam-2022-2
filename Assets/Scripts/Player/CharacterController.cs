@@ -30,6 +30,7 @@ public class CharacterController : MonoBehaviour
 	public BoolEvent OnCrouchEvent;
 	private bool m_wasCrouching = false;
 
+	public bool isDark;
 
 	private bool doubleJump = false;
 
@@ -154,4 +155,39 @@ public class CharacterController : MonoBehaviour
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+
+	private void OnTriggerEnter2D(Collider2D other) {
+		if (other.tag == "spike") {
+			Debug.Log("Dead");
+			Application.LoadLevel(1);
+		}
+		if (other.tag == "light" && isDark) {
+			Debug.Log("Dead");
+			Application.LoadLevel(1);
+		}
+		if (other.tag == "dark" && !isDark) {
+			Debug.Log("Dead");
+			Application.LoadLevel(1);
+		}
+
+
+
+		// if (other.gameObject.CompareTag("platform") && playerCtrl.isJumping) {
+		// 	playerCtrl.isJumping = false;
+		// 	player.transform.parent = other.gameObject.transform;
+		// }
+
+	}
+
+	// private void onTriggerExit(Collider2D other) {
+
+	// 	if (other.gameObject.CompareTag("platform")) {
+	// 		player.transform.parent = null;
+	// 	}
+
+	// }
+
+
+
+
 }
