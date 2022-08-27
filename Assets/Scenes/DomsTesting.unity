@@ -502,6 +502,14 @@ PrefabInstance:
       propertyPath: ObservedComponents.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4822562806191613531, guid: 591ac8a3651b049079adb1dbc6ffac26, type: 3}
+      propertyPath: m_ScaleModel.SynchronizeEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4822562806191613531, guid: 591ac8a3651b049079adb1dbc6ffac26, type: 3}
+      propertyPath: m_RotationModel.SynchronizeEnabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6303551668147921089, guid: 591ac8a3651b049079adb1dbc6ffac26, type: 3}
       propertyPath: m_Name
       value: Player
