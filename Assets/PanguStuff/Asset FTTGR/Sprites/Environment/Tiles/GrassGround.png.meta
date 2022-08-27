@@ -158,7 +158,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -213,18 +213,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1033,7 +1021,7 @@ TextureImporter:
       GrassGround6: 7092582303236834705
       GrassGround15: -3231581265014807042
       GrassGround35: 6230158597735753744
-      GrassGround26: -1158243619938606550
+      GrassGround31: -680242088210058052
       GrassGround12: 771734740194506779
       GrassGround2: -5335115962201115848
       GrassGround11: -2205709031907622699
@@ -1062,7 +1050,7 @@ TextureImporter:
       GrassGround17: 8395314603240462342
       GrassGround14: -3753335598418687612
       GrassGround19: -7662380702448732132
-      GrassGround31: -680242088210058052
+      GrassGround26: -1158243619938606550
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

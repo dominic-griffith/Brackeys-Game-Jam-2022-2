@@ -503,7 +503,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -558,18 +558,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -2360,9 +2348,10 @@ TextureImporter:
     nameFileIdTable:
       GroundWinter54: -8356640093728165356
       GroundWinter11: 1210263866713734479
-      GroundWinter68: -5318843285498987219
+      GroundWinter73: 8931758818855117919
       GroundWinter69: 2079243100829086442
       GroundWinter33: -2144230894313936171
+      GroundWinter68: -5318843285498987219
       GroundWinter3: -4745284827988138515
       GroundWinter47: 7234689654583186666
       GroundWinter51: 1448218774324229756
@@ -2436,11 +2425,10 @@ TextureImporter:
       GroundWinter83: 2172249904788295755
       GroundWinter20: -7461859608126536317
       GroundWinter64: 3718220323353586258
-      GroundWinter48: -8735146389361958788
-      GroundWinter73: 8931758818855117919
-      GroundWinter10: -5504805670752825422
       GroundWinter29: 6310353528261802315
+      GroundWinter10: -5504805670752825422
       GroundWinter39: 6782027410547704143
+      GroundWinter48: -8735146389361958788
       GroundWinter56: -7368463144203962359
   spritePackingTag: 
   pSDRemoveMatte: 0

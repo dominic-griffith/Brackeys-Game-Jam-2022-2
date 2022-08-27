@@ -66,3 +66,6 @@ TagManager:
   - name: terrain
     uniqueID: 1311964649
     locked: 0
+  - name: New Layer 9
+    uniqueID: 351075563
+    locked: 0
