@@ -23,7 +23,6 @@ public class ButtonHoverHandler : MonoBehaviour
     }
 
     public void onPointerDown() {
-        Debug.Log("ee");
         pointerDown = true;
         Destroy(hoverEffectTemp);
     }
