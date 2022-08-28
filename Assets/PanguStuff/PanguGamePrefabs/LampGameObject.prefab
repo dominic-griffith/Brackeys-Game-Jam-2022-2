@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -2783704251516629978}
   - component: {fileID: -4166220056951647765}
   - component: {fileID: 3577275704498202447}
+  - component: {fileID: 3980932331025206971}
   m_Layer: 0
   m_Name: LampGameObject
   m_TagString: Untagged
@@ -136,3 +137,25 @@ PolygonCollider2D:
       - {x: 0.18327641, y: 2.0038087}
       - {x: 0.3115976, y: 2.0035586}
       - {x: 0.30779374, y: 2.3705506}
+--- !u!114 &3980932331025206971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6317167305587649515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0

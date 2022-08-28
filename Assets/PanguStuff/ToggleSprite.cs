@@ -12,20 +12,28 @@ public class ToggleSprite : MonoBehaviour
     
     void Start() {
         spriteRenderer.sprite = initialOn ? onSprite : offSprite;
-    }
-
-    void OnMouseDown() {
-        if (spriteRenderer.sprite == onSprite) {
-            spriteRenderer.sprite = offSprite;
-
-            Destroy(prefabTemp);
-        } else if (spriteRenderer.sprite == offSprite) {
-            spriteRenderer.sprite = onSprite;
-
+        if (initialOn) {
             prefabTemp = Instantiate(togglePrefab, new Vector3(0, 0, 0), Quaternion.identity);
             prefabTemp.transform.parent = gameObject.transform;
             prefabTemp.transform.localPosition = new Vector3(0, 2, 0);
+        }
+    }
 
+    void OnMouseDown() {
+        PhotonView photonView = PhotonView.Get(this);
+        photonView.RPC("HandleMouseDown", RpcTarget.All);
+    }
+
+    [PunRPC]
+    void HandleMouseDown() {
+        if (spriteRenderer.sprite == onSprite) {
+            spriteRenderer.sprite = offSprite;
+            Destroy(prefabTemp);
+        } else if (spriteRenderer.sprite == offSprite) {
+            spriteRenderer.sprite = onSprite;
+            prefabTemp = Instantiate(togglePrefab, new Vector3(0, 0, 0), Quaternion.identity);
+            prefabTemp.transform.parent = gameObject.transform;
+            prefabTemp.transform.localPosition = new Vector3(0, 2, 0);
         }
     }
 }

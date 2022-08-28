@@ -5,8 +5,12 @@ using Photon.Pun;
 
 public class TouchGameOver : MonoBehaviour
 {
+    private bool gameover = false;
 	private void OnTriggerEnter2D(Collider2D other) {
-                SceneLoader.GetInstance().OnlineLoadSceneByName("PlayTestScene");
-                Debug.Log("dead by terrain");
-	}
+        if (!gameover) {
+            SceneLoader.GetInstance().OnlineLoadSceneByName("PlayTestScene");
+            Debug.Log("dead by terrain");
+            gameover = true;
+        }
+    }
 }

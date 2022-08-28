@@ -22,6 +22,7 @@ public class CharacterController : MonoBehaviour
 	[Header("Events")]
 	[Space]
 
+	private bool gameover = false;
 	public UnityEvent OnLandEvent;
 
 	[System.Serializable]
@@ -158,25 +159,26 @@ public class CharacterController : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "spike") {
-			Debug.Log("Dead");
-			Application.LoadLevel(1);
+			if (!gameover) {
+				SceneLoader.GetInstance().OnlineLoadSceneByName("PlayTestScene");
+				Debug.Log("dead by spike");
+				gameover = true;
+      	  	}
 		}
 		if (other.tag == "light" && isDark) {
-			Debug.Log("Dead");
-			Application.LoadLevel(1);
+			if (!gameover) {
+				SceneLoader.GetInstance().OnlineLoadSceneByName("PlayTestScene");
+				Debug.Log("dead by light");
+				gameover = true;
+      	  	}
 		}
 		if (other.tag == "dark" && !isDark) {
-			Debug.Log("Dead");
-			Application.LoadLevel(1);
+			if (!gameover) {
+				SceneLoader.GetInstance().OnlineLoadSceneByName("PlayTestScene");
+				Debug.Log("dead by dark");
+				gameover = true;
+      	  	}
 		}
-
-
-
-		// if (other.gameObject.CompareTag("platform") && playerCtrl.isJumping) {
-		// 	playerCtrl.isJumping = false;
-		// 	player.transform.parent = other.gameObject.transform;
-		// }
-
 	}
 
 	// private void onTriggerExit(Collider2D other) {
