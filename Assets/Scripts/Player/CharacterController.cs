@@ -157,30 +157,6 @@ public class CharacterController : MonoBehaviour
 		transform.localScale = theScale;
 	}
 
-	private void OnTriggerEnter2D(Collider2D other) {
-		if (other.tag == "spike") {
-			if (!gameover) {
-				SceneLoader.GetInstance().OnlineLoadSceneByName("PlayTestScene");
-				Debug.Log("dead by spike");
-				gameover = true;
-      	  	}
-		}
-		if (other.tag == "light" && isDark) {
-			if (!gameover) {
-				SceneLoader.GetInstance().OnlineLoadSceneByName("PlayTestScene");
-				Debug.Log("dead by light");
-				gameover = true;
-      	  	}
-		}
-		if (other.tag == "dark" && !isDark) {
-			if (!gameover) {
-				SceneLoader.GetInstance().OnlineLoadSceneByName("PlayTestScene");
-				Debug.Log("dead by dark");
-				gameover = true;
-      	  	}
-		}
-	}
-
 	// private void onTriggerExit(Collider2D other) {
 
 	// 	if (other.gameObject.CompareTag("platform")) {
