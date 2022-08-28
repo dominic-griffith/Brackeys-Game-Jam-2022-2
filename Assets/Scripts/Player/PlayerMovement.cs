@@ -6,6 +6,7 @@ using Photon.Pun;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
+    public Animator animator;
     public float runSpeed = 40f;
 
     private PhotonView view;
@@ -38,10 +39,18 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
         if(Input.GetButtonDown("Jump"))
         {
             jump = true;
+            animator.SetBool("Jump", true);
         }
+    }
+
+    public void OnLanding()
+    {
+        animator.SetBool("Jump", false);
     }
 
     private void MoveCharacter()
