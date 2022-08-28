@@ -9,6 +9,8 @@ TagManager:
   - light
   - dark
   - platform
+  - white
+  - black
   layers:
   - Default
   - TransparentFX

@@ -4,6 +4,7 @@ using Photon.Pun;
 public class CameraFollow : MonoBehaviour
 {
     private GameObject[] playerObjs;
+    private GameObject[] playerObjs1;
     private Transform player;
 
     public float smoothSpeed = 0.125f;
@@ -13,7 +14,8 @@ public class CameraFollow : MonoBehaviour
 
     private void Start()
     {
-        playerObjs = GameObject.FindGameObjectsWithTag("Player");
+        playerObjs = GameObject.FindGameObjectsWithTag("white");
+        playerObjs1 = GameObject.FindGameObjectsWithTag("black");
         foreach (GameObject playerObj in playerObjs)
         {
 
@@ -23,7 +25,16 @@ public class CameraFollow : MonoBehaviour
                 playerFound = true;
             }
         }
-        
+        foreach (GameObject playerObj in playerObjs1)
+        {
+
+            if (playerObj.GetComponent<PhotonView>().IsMine)
+            {
+                player = playerObj.transform;
+                playerFound = true;
+            }
+        }
+
     }
 
     private void FixedUpdate()
