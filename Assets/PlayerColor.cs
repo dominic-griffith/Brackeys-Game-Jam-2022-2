@@ -2,26 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-using Photon.Realtime;
+
 
 public class PlayerColor : MonoBehaviour
 {
-    PhotonView view;
+    
 
-    private void Update()
+    private void Start()
     {
-        view = GetComponent<PhotonView>();
-        if(view.IsMine)
-            view.RPC("ChangeColor", RpcTarget.AllBuffered, null);
+        ChangeColor();
     }
 
-    [PunRPC]
     private void ChangeColor()
     {
         if (PhotonNetwork.IsMasterClient)
-            this.GetComponent<SpriteRenderer>().color = Color.white;
+            GetComponent<SpriteRenderer>().color = Color.white;
         else
-            this.GetComponent<SpriteRenderer>().color = Color.black;  
+            GetComponent<SpriteRenderer>().color = Color.black;  
     }
 
 }
