@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DomsTesting.unity
     guid: 05b269c437fce4c2a90d2d45b99e3de7
+  - enabled: 1
+    path: Assets/Scenes/Chapter01.unity
+    guid: 5f1a4a6ad4f544ebdbac0ec47472a976
   m_configObjects: {}
