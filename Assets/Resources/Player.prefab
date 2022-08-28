@@ -362,8 +362,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SynchronizePosition: 0
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
+  m_SynchronizeRotation: 0
+  m_SynchronizeScale: 1
   m_UseLocal: 1
 --- !u!1 &6303551668957688210
 GameObject:
