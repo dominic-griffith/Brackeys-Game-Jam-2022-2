@@ -81,6 +81,7 @@ GameObject:
   - component: {fileID: 1755752033}
   - component: {fileID: 1755752032}
   - component: {fileID: 1755752034}
+  - component: {fileID: 5123856029479434722}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -220,6 +221,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: -4141468041256601025}
   - {fileID: 1755752034}
+  - {fileID: 5123856029479434722}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -339,14 +341,30 @@ MonoBehaviour:
   ShowParameterInspector: 1
   m_SynchronizeParameters:
   - Type: 1
-    SynchronizeType: 1
+    SynchronizeType: 2
     Name: Speed
   - Type: 4
-    SynchronizeType: 1
+    SynchronizeType: 2
     Name: Jump
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
+--- !u!114 &5123856029479434722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6303551668147921089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 0
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &6303551668957688210
 GameObject:
   m_ObjectHideFlags: 0
