@@ -27,6 +27,6 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        SceneLoader.GetInstance().OnlineLoadSceneByName("DomsTesting");
+        SceneLoader.GetInstance().OnlineLoadSceneByName("PlayTestScene");
     }
 }

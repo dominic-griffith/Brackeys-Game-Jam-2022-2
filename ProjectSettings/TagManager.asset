@@ -16,7 +16,7 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
@@ -72,4 +72,7 @@ TagManager:
     locked: 0
   - name: forefront
     uniqueID: 351075563
+    locked: 0
+  - name: Player
+    uniqueID: 2553438335
     locked: 0
