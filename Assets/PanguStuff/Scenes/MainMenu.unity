@@ -8620,6 +8620,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneChanger
       objectReference: {fileID: 0}
+    - target: {fileID: 4319164642346838301, guid: 1f9effed021a68f4785e7d1d17cf0df8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4319164642346838303, guid: 1f9effed021a68f4785e7d1d17cf0df8, type: 3}
       propertyPath: m_RootOrder
       value: 3
